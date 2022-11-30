@@ -9,7 +9,8 @@ const nav = {
             "icon": "icon-compare",
             "children": [
                 "./compareModels",
-                "./compareNModels"
+                "./compareNModels",
+                "./compareQuantReg"
             ]
         },
         "./confidenceInterval",
