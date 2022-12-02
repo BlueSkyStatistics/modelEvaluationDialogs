@@ -16,7 +16,7 @@ var localization = {
             r_help: "help(personfit, package='eRm')",
             body: `
                 <b>Description: personfit statistics</b></br>
-                For models of class Rm, eRm or dRm (Created by using IRT->Simple Rasch Model with CML estimation) uses the function personfit to display personfit statistics.
+                For models of class Rm, eRm or dRm (Created by using IRT -> Simple Rasch Model with CML estimation) uses the function personfit to display personfit statistics.
 
                 <br/><br/>
                 <b>Usage</b>
@@ -44,6 +44,7 @@ var localization = {
                 Run the following from the BlueSky Statistics Syntax editor help(personfit, package ='eRm')
                 <br/><br/>
                 <b>Packages</b>
+                <br/>
                 eRm
                 <br/>
 
@@ -52,7 +53,9 @@ var localization = {
                 <br/><br/>
                 <b>Usage</b>
                 <br/>
+                <code>
                 MLoef(robj, splitcr = "median")
+                </code>
                 <br/><br/>
                 <b>Details</b>
                 <br/>  
@@ -63,7 +66,7 @@ var localization = {
                 <b>Values</b>
                 <br/>
                 MLoef returns an object of class MLoef containing:
-                <br/>
+                <br/><br/>
                 LR: LR-value
                 <br/>
                 df: degrees of freedom
@@ -86,12 +89,14 @@ var localization = {
                 <br/>
                 warning: items equalling median or mean for the respective split criteria
                 <br/><br/>
+                <b>Packages</b>
+                <br/>
+                eRm                
+                <br/><br/>
                 <b>Help</b>
                 <br/>
                 Run the following from the BlueSky Statistics Syntax editor  help(MLoef, package ='eRm')
-                <br/><br/>
-                <b>Packages</b>
-                eRm
+
                 `}
     }
 }
@@ -142,7 +147,7 @@ local({
                 el: new checkbox(config, {
                     label: localization.en.chkbox,
                     no: "chkbox",
-                    style: "ml-4",
+                    style: "mt-3",
                     bs_type: "valuebox",
                     extraction: "TextAsIs",
                     true_value: "TRUE",
@@ -152,14 +157,15 @@ local({
                 })
             },
 
-            label2: { el: new labelVar(config, { label: localization.en.label2, h: 6 }) },
+            lbl2: { el: new labelVar(config, { label: localization.en.lbl2, h: 6, style: "mt-3" }) },
             rd1: {
                 el: new radioButton(config, {
                     label: localization.en.rd1,
                     no: "splitcriteria",
                     increment: "rd1",
                     value: "median",
-                    extraction: "ValueAsIs"
+                    extraction: "ValueAsIs",
+                    state: "checked"
                 })
             }, 
             rd2: {
@@ -169,13 +175,14 @@ local({
                     increment: "rd2",
                     value: "mean",
                     extraction: "ValueAsIs"
+                    
                 })
             }                         
 
         }
         const content = {
             items: [objects.label1.el.content, objects.label1b.el.content, objects.modelselector1.el.content,
-                objects.chkbox.el.content, objects.label2.el.content,
+                objects.chkbox.el.content, objects.lbl2.el.content,
                 objects.rd1.el.content, objects.rd2.el.content
             ],
             nav: {

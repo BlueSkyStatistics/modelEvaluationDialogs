@@ -29,7 +29,9 @@ var localization = {
                 <b>Usage for plotICC</b>
                 <br/>
                 <code>
+                <br/>
                 ## S3 method for class 'Rm'
+                <br/>
                 plotICC(object, item.subset = "all", empICC = NULL, empCI = NULL,
                    mplot = NULL, xlim = c(-4, 4), ylim = c(0, 1),
                    xlab = "Latent Dimension", ylab = "Probability to Solve", main=NULL,
@@ -110,16 +112,19 @@ var localization = {
                 The optional confidence intervals are obtained by a procedure first given in Clopper and Pearson (1934) based on the beta distribution (see binom.test).
                 <br/><br/>
                 <b>Packages</b>
+                <br/>
                 eRm
 
                 <br/><br/>
                 <b>Usage for plot.tam</b>
-                <br/>           
+                <br/>  
+                <code>         
                 ## S3 method for class 'tam' and tam.mml
+                <br/>
                 plot(x, items=1:x$nitems, type="expected", low=-3, high=3, 
                                    export=TRUE,  observed=TRUE, 
                                    package="lattice" ...)           
-                                   
+                </code>        
                 <br/><br/>
                 <b>Details for plot.tam</b>
                 <br/>   
@@ -151,6 +156,7 @@ var localization = {
                 </ul>
                 <br/><br/>
                 <b>Packages</b>
+                <br/>
                 TAM
                 <br/><br/>
                 <b>Help</b>

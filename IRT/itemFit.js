@@ -36,6 +36,7 @@ var localization = {
                 The detailed help will launch in your default browser         
                 <br/><br/>
                 <b>Packages</b>
+                <br/>
                 eRm, TAM
                 <br/><br/>
                 <b>Help</b>

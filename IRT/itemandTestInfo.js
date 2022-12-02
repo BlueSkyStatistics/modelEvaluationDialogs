@@ -29,6 +29,7 @@ var localization = {
                 theta:  Supporting or sampling points on the latent trait         
                 <br/><br/>
                 <b>Packages</b>
+                <br/>
                 eRm
                 <br/><br/>
                 <b>Help</b>

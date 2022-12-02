@@ -19,8 +19,11 @@ var localization = {
 <br/>
 <code> 
 ## S3 method for class 'Rm'
+<br/>
 LRtest(object, splitcr = "median", se = TRUE)
+<br/>
 ## S3 method for class 'LR'
+<br/>
 plotGOF(x, beta.subset = "all", main = "Graphical Model Check", xlab, ylab,
     tlab = "item", xlim, ylim, type = "p", pos = 4, conf = NULL, ctrline = NULL, 
     smooline = NULL, asp = 1, x_axis = TRUE, y_axis = TRUE, set_par = TRUE, 
@@ -51,7 +54,7 @@ conf: for plotting confidence ellipses for the item parameters. If conf = NULL (
 </li>
 </ul>
 <b>Details</b></br>
-HIf the data set contains missing values and mean or median is specified as split criterion, means or medians are calculated for each missing value subgroup and consequently used for raw score splitting.
+If the data set contains missing values and mean or median is specified as split criterion, means or medians are calculated for each missing value subgroup and consequently used for raw score splitting.
 <br/>
 When using interactive selection for both labelling of single points (tlab = "identify" and drawing confidence ellipses at certain points (ia = TRUE) then first all plotted points are labelled and afterwards all ellipses are generated. Both identification processes can be terminated by clicking the second (right) mouse button and selecting ‘Stop’ from the menu, or from the ‘Stop’ menu on the graphics window.
 <br/>
@@ -61,7 +64,7 @@ summary and print methods are available for objects of class LR.
 <br/><br/>
 <b>Value</b><br/>
 LRtest returns an object of class LR containing:
-<br/>
+<br/><br/>
 LR: LR-value.
 <br/>
 df: Degrees of freedom of the test statistic.
@@ -147,13 +150,13 @@ local({
                     label: localization.en.destination,
                     no: "destination",
                     filter: "String|Numeric|Date|Logical|Ordinal|Nominal|Scale",
-                    extraction: "Prefix|UseComma",
+                    extraction: "NoPrefix|UseComma|Enclosed",
                     required: true,
                 }), r: ['{{ var | safe}}']
             },
         }
         const content = {
-            head: [objects.label1.el.content, objects.label1.el.content, 
+            head: [objects.label1.el.content, objects.label1b.el.content, 
                 objects.modelselector1.el.content, objects.spcr.el.content],
             left: [objects.content_var.el.content],
             right: [objects.destination.el.content],
