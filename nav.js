@@ -23,6 +23,19 @@ const nav = {
                 "./pseudoRSquared"
             ]
         },
+        {
+            "name": "IRT",
+            "icon": "icon-brightness-and-contrast",
+            "children": [
+                "./IRT/iCCPlots",
+                "./IRT/itemFit",
+                "./IRT/plotPImap",
+                "./IRT/itemandTestInfo",
+                "./IRT/personFit",
+                "./IRT/likelihoodRatiosPlotBetas"
+            ]
+        },
+
         "./bonFerroniOutlierTest",
         "./plotAModel",
         {
