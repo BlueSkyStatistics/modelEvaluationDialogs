@@ -31,8 +31,8 @@ const nav = {
                 "./IRT/itemFit",
                 "./IRT/plotPImap",
                 "./IRT/itemandTestInfo",
-                "./IRT/personFit",
-                "./IRT/likelihoodRatiosPlotBetas"
+                "./IRT/likelihoodRatiosPlotBetas",
+                "./IRT/personFit"
             ]
         },
 
