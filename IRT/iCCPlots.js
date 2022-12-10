@@ -182,8 +182,7 @@ if (classOfModel =="Rm" || classOfModel =="dRm")
     mplot = NULL), xlim = c({{selected.range1 | safe}}), ylim = c(0, 1),
     xlab = "Latent Dimension", ylab = "Probability to Solve", main=NULL,
     col = NULL, lty = 1, legpos = "left", ask = TRUE)
-}
-else if (classOfModel =="tam.mml" || classOfModel =="tam.mml.2pl"|| classOfModel =="tam.mml.2pl" || classOfModel =="tam.mml.mfr")
+} else if (classOfModel =="tam.mml" || classOfModel =="tam.mml.2pl"|| classOfModel =="tam.mml.2pl" || classOfModel =="tam.mml.mfr")
 {
     TAM::plot.tam({{selected.modelselector1 | safe}}, type="items",  export=FALSE, package="graphics", observed=TRUE, low={{selected.tb1 | safe}}, high={{selected.tb2 | safe}})
 }   
