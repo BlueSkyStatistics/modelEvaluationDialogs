@@ -185,7 +185,7 @@ if (classOfModel =="Rm" || classOfModel =="dRm")
     col = NULL, lty = 1, legpos = "left", ask = FALSE)
 } else if (classOfModel =="tam.mml" || classOfModel =="tam.mml.2pl"|| classOfModel =="tam.mml.2pl" || classOfModel =="tam.mml.mfr")
 {
-    TAM::plot.tam({{selected.modelselector1 | safe}}, type="items",  export=FALSE, package="graphics", observed=TRUE {{selected.tb1 | safe}} {{selected.tb2 | safe}})
+    plot({{selected.modelselector1 | safe}}, type="items",  export=FALSE, package="graphics", observed=TRUE {{selected.tb1 | safe}} {{selected.tb2 | safe}})
 }   
 
 `,
