@@ -175,18 +175,19 @@ class iCCPlots extends baseModal {
             RCode: `
 require(eRm);
 require(TAM);
+
 classOfModel  =class({{selected.modelselector1 | safe}})
 if (classOfModel =="Rm" || classOfModel =="dRm")
 {
     eRm::plotICC({{selected.modelselector1 | safe}}, item.subset = "all", empICC=list("raw",type="b",col="blue",lty="dotted", empCI = NULL,
-    mplot = NULL), xlim = c({{selected.range1 | safe}}), ylim = c(0, 1),
+    mplot = NULL), {{selected.range1 | safe}} ylim = c(0, 1),
     xlab = "Latent Dimension", ylab = "Probability to Solve", main=NULL,
-    col = NULL, lty = 1, legpos = "left", ask = TRUE)
-}
-else if (classOfModel =="tam.mml" || classOfModel =="tam.mml.2pl"|| classOfModel =="tam.mml.2pl" || classOfModel =="tam.mml.mfr")
+    col = NULL, lty = 1, legpos = "left", ask = FALSE)
+} else if (classOfModel =="tam.mml" || classOfModel =="tam.mml.2pl"|| classOfModel =="tam.mml.2pl" || classOfModel =="tam.mml.mfr")
 {
-    TAM::plot.tam({{selected.modelselector1 | safe}}, type="items",  export=FALSE, package="graphics", observed=TRUE, low={{selected.tb1 | safe}}, high={{selected.tb2 | safe}})
+    plot({{selected.modelselector1 | safe}}, type="items",  export=FALSE, package="graphics", observed=TRUE {{selected.tb1 | safe}} {{selected.tb2 | safe}})
 }   
+
 `,
             pre_start_r: JSON.stringify({
                 modelselector1: "BSkyGetAvailableModels(c(\"Rm\", \"dRm\",\"tam.mml\", \"tam.mml.2pl\",\"tam.mml.mfr\"))",
@@ -238,6 +239,7 @@ else if (classOfModel =="tam.mml" || classOfModel =="tam.mml.2pl"|| classOfModel
                   type: "character",
                   ml: 4,
                   width:"w-25",
+                  wrapped: 'xlim=c(%val%),'
                 })
               },
 
@@ -273,6 +275,7 @@ else if (classOfModel =="tam.mml" || classOfModel =="tam.mml.2pl"|| classOfModel
                   type: "numeric",
                   ml: 4,
                   width:"w-25",
+                  wrapped: ', low=c(%val%)'
                 })
               },
 
@@ -286,6 +289,7 @@ else if (classOfModel =="tam.mml" || classOfModel =="tam.mml.2pl"|| classOfModel
                   type: "numeric",
                   ml: 4,
                   width:"w-25",
+                  wrapped: ', high=c(%val%)'
                 })
               }             
 
