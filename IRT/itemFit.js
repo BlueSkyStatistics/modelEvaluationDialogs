@@ -95,7 +95,7 @@ local({
             items: [objects.label1.el.content, objects.label1b.el.content, objects.modelselector1.el.content ],
             nav: {
                 name: localization.en.navigation,
-                icon: "icon-p_a_given_b",
+                icon: "icon-item_fit",
                 onclick: `r_before_modal("${config.id}")`
             }
         }
