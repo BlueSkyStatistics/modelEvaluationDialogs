@@ -13,6 +13,7 @@ const nav = {
                 "./compareQuantReg"
             ]
         },
+        "./CompareROCCurves",
         "./confidenceInterval",
         {
             "name": "Fit",
