@@ -162,7 +162,7 @@ local({
             right: [objects.destination.el.content],
             nav: {
                 name: localization.en.navigation,
-                icon: "icon-p_a_given_b",
+                icon: "icon-icc",
                 onclick: `r_before_modal("${config.id}")`
             }
         }
