@@ -13,7 +13,6 @@ const nav = {
                 "./compareQuantReg"
             ]
         },
-        "./CompareROCCurves",
         "./confidenceInterval",
         {
             "name": "Fit",
@@ -27,7 +26,7 @@ const nav = {
         },
         {
             "name": "IRT",
-            "icon": "icon-brightness-and-contrast",
+            "icon": "icon-lamp",
             "children": [
                 "./IRT/iCCPlots",
                 "./IRT/itemFit",
