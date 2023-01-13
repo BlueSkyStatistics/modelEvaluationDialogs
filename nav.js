@@ -26,14 +26,14 @@ const nav = {
         },
         {
             "name": "IRT",
-            "icon": "icon-brightness-and-contrast",
+            "icon": "icon-lamp",
             "children": [
                 "./IRT/iCCPlots",
-                "./IRT/itemFit",
-                "./IRT/plotPImap",
                 "./IRT/itemandTestInfo",
+                "./IRT/itemFit",
                 "./IRT/likelihoodRatiosPlotBetas",
-                "./IRT/personFit"
+                "./IRT/personFit",
+                "./IRT/plotPImap"
             ]
         },
 

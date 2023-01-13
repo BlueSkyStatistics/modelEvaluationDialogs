@@ -187,7 +187,7 @@ local({
             ],
             nav: {
                 name: localization.en.navigation,
-                icon: "icon-icc",
+                icon: "icon-person",
                 onclick: `r_before_modal("${config.id}")`
             }
         }

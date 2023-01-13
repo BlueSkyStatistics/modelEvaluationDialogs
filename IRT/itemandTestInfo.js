@@ -73,7 +73,7 @@ plotINFO({{selected.modelselector1 | safe}}, theta = seq(-4, 4,length.out = 1001
             items: [objects.label1.el.content, objects.label1b.el.content, objects.modelselector1.el.content ],
             nav: {
                 name: localization.en.navigation,
-                icon: "icon-icc",
+                icon: "icon-temperatire",
                 onclick: `r_before_modal("${config.id}")`
             }
         }
