@@ -151,7 +151,9 @@ if (ROC && {{selected.roctable | safe}})
     }
     results <-createROCTable(predictedprobs =BSkyPredictions[[2]],dependentvariable =BSkyPredictions[[3]], modelname="{{selected.modelSelection | safe}}",datasetname ="{{dataset.name}}")
     BSkyFormat(results, singleTableOutputHeader='ROC Table')
-    pr <- ROCR::prediction(BSkyPredictions[[2]], BSkyPredictions[[3]], label.ordering = levels(BSkyPredictions[[3]]))
+    BSkytemp = data.frame(BSkyPredictions[[2]], BSkyPredictions[[3]])
+    BSkytemp = na.omit(BSkytemp)
+    pr <- ROCR::prediction(BSkytemp[,1], BSkytemp[,2], label.ordering = levels(BSkyPredictions[[3]]))
     attributes(pr)$cutoffs[[1]][attributes(pr)$cutoffs[[1]]==Inf]<-1
     prf <- ROCR::performance(pr, measure = "tpr", x.measure = "fpr")
     attributes(prf)$cutoffs[[1]][attributes(prf)$cutoffs[[1]]==Inf]<-1   
@@ -161,6 +163,7 @@ if (ROC && {{selected.roctable | safe}})
     cat( paste("The area under the curve (AUC) is",auc,sep=" "))
     perf <- ROCR::performance(pr, "sens", "spec")
     plot(perf, colorize=TRUE, lwd= 3, main="... Sensitivity/Specificity plots ...")
+    if( exists("BSkytemp")) rm(BSkytemp)
 }
 }
 )
